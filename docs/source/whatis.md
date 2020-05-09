@@ -1,5 +1,7 @@
 # Introduction
 
+일반적으로 블록체인은 피어 노드들의 분산화된 네트워크로 유지되는 불변의 거래장부입니다.
+
 In general terms, a blockchain is an immutable transaction ledger, maintained
 within a distributed network of _peer nodes_. These nodes each maintain a copy
 of the ledger by applying transactions that have been validated by a _consensus
