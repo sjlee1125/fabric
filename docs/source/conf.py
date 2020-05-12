@@ -141,6 +141,11 @@ htmlhelp_basename = 'hyperledger-fabricdocsdoc'
 # -- Options for LaTeX output ---------------------------------------------
 
 latex_elements = {
+    'preamble': "".join((
+    '\usepackage[utf8x]{inputenc}',
+    '\documentclass{article}',
+    'usepackage{kotex}',
+    ))
     # The paper size ('letterpaper' or 'a4paper').
     #
     # 'papersize': 'letterpaper',

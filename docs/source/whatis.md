@@ -115,8 +115,8 @@ off of what trust _does_ exist between participants, such as a legal agreement
 or framework for handling disputes.
 
 Fabric platform은 permissioned입니다. 이것은 익명이고 그러므로 완전히 untrusted한 public permissionless network와 
-다르게 참여자들은 서로를 알고 있습니다. 참여자가 완전히 다른 참여자에 대한 신뢰가 없어도(ex-참여자가 경쟁자일때) 네트워크가 governance model아래 운영됩니다.
-- governance model : 
+다르게 참여자들은 서로를 알고 있습니다. 참여자가 완전히 다른 참여자에 대한 신뢰가 없어도(ex-참여자가 경쟁자일때) 네트워크가 참여자간의 신뢰가 존재하는 것을
+기반으로하는governance model아래 운영됩니다.
 
 One of the most important of the platform's differentiators is its support for
 **pluggable consensus protocols** that enable the platform to be more
