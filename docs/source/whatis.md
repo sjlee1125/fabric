@@ -7,7 +7,39 @@ protocol_, grouped into blocks that include a hash that bind each block to the
 preceding block.
 
 일반적으로 블록체인은 peer 노드로 이루어진 분산화된 네트워크안에서 유지되는 불변의 거래장부입니다.
-이승준
+트랜잭션은 합의 프로토콜(전 블록의 hash를 현 블록에 기록해 블록을 연결)에 따라 검증이 되고 장부에 기록이 됩니다. 각각의 노드들은 장부의 복사본을 유지합니다.
+
+The first and most widely recognized application of blockchain is the
+[Bitcoin](https://en.wikipedia.org/wiki/Bitcoin) cryptocurrency, though others
+have followed in its footsteps. Ethereum, an alternative cryptocurrency, took a
+different approach, integrating many of the same characteristics as Bitcoin but
+adding _smart contracts_ to create a platform for distributed applications.
+Bitcoin and Ethereum fall into a class of blockchain that we would classify as
+_public permissionless_ blockchain technology. Basically, these are public
+networks, open to anyone, where participants interact anonymously.
+
+블록체인 중 가장 첫번째로 알려진건 가상화폐 비트코인입니다. 다른 가상화폐들도 비트코인을 따라갑니다.
+이더리움은 비트코인의 많은 특징을 가져감과 동시에 분산화된 어플리케이션을 만들기 위한 스마트컨트랙트를 추가하였습니다.
+비트코인과 이더리움은 public permissionless 블록체인이라고 분류합니다. public 블록체인은 누구에게나 열려있고
+참여자들은 익명으로 상호작용합니다.
+
+As the popularity of Bitcoin, Ethereum and a few other derivative technologies
+grew, interest in applying the underlying technology of the blockchain,
+distributed ledger and distributed application platform to more innovative
+_enterprise_ use cases also grew. However, many enterprise use cases require
+performance characteristics that the permissionless blockchain technologies are
+unable (presently) to deliver. In addition, in many use cases, the identity of
+the participants is a hard requirement, such as in the case of financial
+transactions where Know-Your-Customer (KYC) and Anti-Money Laundering (AML)
+regulations must be followed.
+
+블록체인과 이더리움이 유명해지고 몇가지 파생된 블록체인 기술이 발전하면서 블록체인 기술을 적용하는 관심 및
+분산화 장부, 어플리케이션 플랫폼을 사업에 적용하는 케이스들도 같이 증가했습니다. 그러나 많은 사업화 모델이 
+permissionless 블록체인이 맞지 않는다는 점을 내포하였습니다. 게다가 많은 유스 케이스 예를 들면 Know-Your-Customer (KYC) 와 Anti-Money Laundering (AML)
+와같은 규제에서 참여자들의 신원은 필수 요소였습니다.
+
+For enterprise use, we need to consider the following requirements:
+산업에서 사용이 되려면 다름과 같은 필수요소가 팔요합니다:
 
 - Participants must be identified/identifiable
 - Networks need to be _permissioned_
