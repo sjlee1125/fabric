@@ -7,6 +7,7 @@ protocol_, grouped into blocks that include a hash that bind each block to the
 preceding block.
 
 일반적으로 블록체인은 peer 노드로 이루어진 분산화된 네트워크안에서 유지되는 불변의 거래장부입니다.
+이승준
 
 - Participants must be identified/identifiable
 - Networks need to be _permissioned_
