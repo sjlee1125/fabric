@@ -7,39 +7,6 @@ protocol_, grouped into blocks that include a hash that bind each block to the
 preceding block.
 
 일반적으로 블록체인은 peer 노드로 이루어진 분산화된 네트워크안에서 유지되는 불변의 거래장부입니다.
-트랜잭션은 합의 프로토콜(전 블록의 hash를 현 블록에 기록해 블록을 연결)에 따라 검증이 되고 장부에 기록이 됩니다. 각각의 노드들은 장부의 복사본을 유지합니다.
-
-The first and most widely recognized application of blockchain is the
-[Bitcoin](https://en.wikipedia.org/wiki/Bitcoin) cryptocurrency, though others
-have followed in its footsteps. Ethereum, an alternative cryptocurrency, took a
-different approach, integrating many of the same characteristics as Bitcoin but
-adding _smart contracts_ to create a platform for distributed applications.
-Bitcoin and Ethereum fall into a class of blockchain that we would classify as
-_public permissionless_ blockchain technology. Basically, these are public
-networks, open to anyone, where participants interact anonymously.
-
-블록체인 중 가장 첫번째로 알려진건 가상화폐 비트코인입니다. 다른 가상화폐들도 비트코인을 따라갑니다.
-이더리움은 비트코인의 많은 특징을 가져감과 동시에 분산화된 어플리케이션을 만들기 위한 스마트컨트랙트를 추가하였습니다.
-비트코인과 이더리움은 public permissionless 블록체인이라고 분류합니다. public 블록체인은 누구에게나 열려있고
-참여자들은 익명으로 상호작용합니다.
-
-As the popularity of Bitcoin, Ethereum and a few other derivative technologies
-grew, interest in applying the underlying technology of the blockchain,
-distributed ledger and distributed application platform to more innovative
-_enterprise_ use cases also grew. However, many enterprise use cases require
-performance characteristics that the permissionless blockchain technologies are
-unable (presently) to deliver. In addition, in many use cases, the identity of
-the participants is a hard requirement, such as in the case of financial
-transactions where Know-Your-Customer (KYC) and Anti-Money Laundering (AML)
-regulations must be followed.
-
-블록체인과 이더리움이 유명해지고 몇가지 파생된 블록체인 기술이 발전하면서 블록체인 기술을 적용하는 관심 및
-분산화 장부, 어플리케이션 플랫폼을 사업에 적용하는 케이스들도 같이 증가했습니다. 그러나 많은 사업화 모델이 
-permissionless 블록체인이 맞지 않는다는 점을 내포하였습니다. 게다가 많은 유스 케이스 예를 들면 Know-Your-Customer (KYC) 와 Anti-Money Laundering (AML)
-와같은 규제에서 참여자들의 신원은 필수 요소였습니다.
-
-For enterprise use, we need to consider the following requirements:
-산업에서 사용이 되려면 다름과 같은 필수요소가 팔요합니다:
 
 - Participants must be identified/identifiable
 - Networks need to be _permissioned_
@@ -48,11 +15,6 @@ For enterprise use, we need to consider the following requirements:
 - Privacy and confidentiality of transactions and data pertaining to business
   transactions
 
-- 참여자의 신분은 반드시 식별가능해야한다.
-- 네트워크는 승인을 받아야한다.
-- 대량 트랜잭션 처리 성능
-- 빠른 트랜잭션 컨펌
-- 트랜잭션의 프라이버시와 기밀유지 및 비스니스 트랜잭션에 대한 데이터 유지
  
 While many early blockchain platforms are currently being _adapted_ for
 enterprise use, Hyperledger Fabric has been _designed_ for enterprise use from
@@ -60,19 +22,12 @@ the outset. The following sections describe how Hyperledger Fabric (Fabric)
 differentiates itself from other blockchain platforms and describes some of the
 motivation for its architectural decisions.
 
-많은 블록체인 플랫폼이 현재 기업에서 적용되는 한편 Hyperledger Fabric은 처음부터 기업형으로 디자인 되었습니다.
-앞으로 나올 섹션들은 Hyperledger Fabric (Fabric)이 얼마나 다른 블록체인 플랫폼과 차별화되어있는지 설명하고
-구조적 결정(디자인 결정)에 동기를 부여합니다. 
-
 ## Hyperledger Fabric
 
 Hyperledger Fabric is an open source enterprise-grade permissioned distributed
 ledger technology (DLT) platform, designed for use in enterprise contexts,
 that delivers some key differentiating capabilities over other popular
 distributed ledger or blockchain platforms.
-
-Hyperledger Fabric은 open source enterprise-grade permissioned distributed ledger technology (DLT) platform
-으로 기업을 대상으로 디자인 되었습니다. - 다른 유명한 분산화 장부나 블록체인 플랫폼으로부터 차별화된 포인트를 전달합니다.
 
 One key point of differentiation is that Hyperledger was established under the
 Linux Foundation, which itself has a long and very successful history of
@@ -83,28 +38,16 @@ diverse set of maintainers from multiple organizations. It has a development
 community that has grown to over 35 organizations and nearly 200 developers
 since its earliest commits.
 
-Hyperledger의 첫번째 차별화 포인트는 리눅스 재단 아래 설립되었다는것이다.
-리눅스 재단은 커뮤니티와 에코시스템을 탄탄히하는 open governance 아래 오픈소스 개발을 자체적으로 아주 오래했고 매우 성공적으로 이끌어낸 역사를 가지고 있다.
-Hyperledger는 다양한 기술 관련 위원회에 의해 관리되며 Hyperledger Fabric 프로젝트는 다수의 기관에 있는
-다양한 maintainer의 모임에 의해 유지된다. 최근 커밋까지 Hyperledger는 35개기관과 200명 가까이의 개발자를 가진
-개발 커뮤니티를 가지고 있다.
-
 Fabric has a highly **modular** and **configurable** architecture, enabling
 innovation, versatility and optimization for a broad range of industry use cases
 including banking, finance, insurance, healthcare, human resources, supply
-chain and even digital music delivery.
-
-Fabric은 modular하고 configurable한 구조를 가지고 있으며, banking, finance, insurance, healthcare, human resources, supply
-chain 및 digital music delivery 등 넓은 범위의 industry use cases에서 innovation, versatility 와 optimization을 가능하게 한다. 
+chain and even digital music delivery. 
 
 Fabric is the first distributed ledger platform to support **smart contracts
 authored in general-purpose programming languages** such as Java, Go and
 Node.js, rather than constrained domain-specific languages (DSL). This means
 that most enterprises already have the skill set needed to develop smart
 contracts, and no additional training to learn a new language or DSL is needed.
-
-Fabric은 domain-specific languages (DSL)와 같은 제한적인 언어 대신 Java, Go 및 Node.js와 같은 
-general-purpose programming languages로 작성되는 스마트컨트랙트를 지원하는 첫번째 분산화 장부 플랫폼입니다.
 
 The Fabric platform is also **permissioned**, meaning that, unlike with a public
 permissionless network, the participants are known to each other, rather than
@@ -113,10 +56,6 @@ may not _fully_ trust one another (they may, for example, be competitors in the
 same industry), a network can be operated under a governance model that is built
 off of what trust _does_ exist between participants, such as a legal agreement
 or framework for handling disputes.
-
-Fabric platform은 permissioned입니다. 이것은 익명이고 그러므로 완전히 untrusted한 public permissionless network와 
-다르게 참여자들은 서로를 알고 있습니다. 참여자가 완전히 다른 참여자에 대한 신뢰가 없어도(ex-참여자가 경쟁자일때) 네트워크가 참여자간의 신뢰가 존재하는 것을
-기반으로하는governance model아래 운영됩니다.
 
 One of the most important of the platform's differentiators is its support for
 **pluggable consensus protocols** that enable the platform to be more
