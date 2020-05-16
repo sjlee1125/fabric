@@ -117,7 +117,7 @@ or framework for handling disputes.
 
 Fabric platform은 permissioned입니다. 이것은 익명이고 그러므로 완전히 untrusted한 public permissionless network와 
 다르게 참여자들은 서로를 알고 있습니다. 참여자가 완전히 다른 참여자에 대한 신뢰가 없어도 네트워크가 참여자간의 신뢰가 존재하는 것을
-기반으로하는governance model아래 운영됩니다.
+기반으로하는 governance model 아래 운영됩니다.
 
 One of the most important of the platform's differentiators is its support for
 **pluggable consensus protocols** that enable the platform to be more
@@ -166,9 +166,12 @@ protocols such as LDAP or OpenID Connect, key management protocols or
 cryptographic libraries, the platform has been designed at its core to be
 configured to meet the diversity of enterprise use case requirements.
 
-Hyperledger Fabric은 
+Hyperledger Fabric은 modular한 아키텍쳐를 목표로 설계되었습니다. Fabric이 어떤것으로 정의되든
+이 플랫폼은 사업화 모델에 필요한 다양한 필요조건을 충족시키는 방향으로 설계되었습니다.
 
 At a high level, Fabric is comprised of the following modular components:
+
+고차원적인 관점에서 Fabric은 다음과관은 모듈 컴포넌트들로 구성되어있습니다.
 
 - A pluggable _ordering service_ establishes consensus on the order of
 transactions and then broadcasts blocks to peers.
@@ -183,9 +186,22 @@ have direct access to the ledger state.
 - A pluggable endorsement and validation policy enforcement that can be
 independently configured per application.
 
+- pluggable _ordering service_는 트랜잭션 순서를 정하고 블록을 피어에게 전달합니다.
+- A pluggable _membership service provider_는 네트워크의 요소들을 가상 ID와 연결시킵니다.
+- optional _peer-to-peer gossip service_는 Ordering Service가 생성한 블록결과를
+ 다른 피어에게 전파합니다
+- 스마트 컨트랙트는 Docker와 같은 컨데이너 환경에서 독자적으로 실행됩니다. 스마트 컨트랙트는 ledger에
+ 직접적으로 업데이트할 권한이 없고 스탠다드한 프로그래밍 언어로 작성가능합니다.
+- ledger는 다양한 DBMS로 설정될 수 있습니다.
+- A pluggable endorsement and validation policy enforcement는 어플리케이션 별로 설정됩니다.
+
 There is fair agreement in the industry that there is no "one blockchain to
 rule them all". Hyperledger Fabric can be configured in multiple ways to
 satisfy the diverse solution requirements for multiple industry use cases.
+
+산업에서는 "하나의 블록체인이 모든 블록체인을 지배할 수 없다"라는 규칙이 있습니다.
+Hyperledger Fabric은 다수의 산업 유스 케이스를 위한 다양한 솔루션 조건들을 만족시키기위해 다양한 방법으로
+설정될 수 있습니다.
 
 ## Permissioned vs Permissionless Blockchains
 
@@ -196,6 +212,8 @@ order to mitigate this absence of trust, permissionless blockchains typically
 employ a "mined" native cryptocurrency or transaction fees to provide economic
 incentive to offset the extraordinary costs of participating in a form of
 byzantine fault tolerant consensus based on "proof of work" (PoW).
+
+permissionless blockchain에서 
 
 **Permissioned** blockchains, on the other hand, operate a blockchain amongst
 a set of known, identified and often vetted participants operating under a
