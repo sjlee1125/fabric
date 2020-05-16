@@ -132,18 +132,31 @@ decentralized use case, a more traditional
 [byzantine fault tolerant](https://en.wikipedia.org/wiki/Byzantine_fault_tolerance)
 (BFT) consensus protocol might be required.
 
+이 플랫폼의 가장 큰 차이점 중 하나는 특정 모델에 대해 커스터마이즈 가능한 **pluggable consensus protocols**
+를 지원하는 것입니다. 예를 들면 사업을 수행할 때나 신뢰된 기관에 의해 작동될때 완전한 byzantine fault tolerant consensus
+는 필요 없어질수도 있고 과도한 설정일 수도 있습니다.
+
 Fabric can leverage consensus protocols that **do not require a native
 cryptocurrency** to incent costly mining or to fuel smart contract execution.
 Avoidance of a cryptocurrency reduces some significant risk/attack vectors,
 and absence of cryptographic mining operations means that the platform can be
 deployed with roughly the same operational cost as any other distributed system.
 
+Fabric은 채굴하거나 스마트컨트랙트에 수수료를 납부하는 가상화폐를 필요로하지않는 합의알고리즘을 채용합니다.
+가상화폐를 채택하지 않는것은 막대한 손실이나 공격을 줄이며 채굴의 부재는 Fabric이 다른 분산화 시스템과 같이
+거의 비슷한 비용을 들인다라는것을 의미한다. 
+
 The combination of these differentiating design features makes Fabric one of
 the **better performing platforms** available today both in terms of transaction
 processing and transaction confirmation latency, and it enables **privacy and confidentiality** of transactions and the smart contracts (what Fabric calls
 "chaincode") that implement them.
 
+이런 디자인 특징들의 조합은 Fabric을 트랜잭션 처리 및 트랜잭션 컨펌 기간관점에서 성능이 좋은 플랫폼으로 만든다.
+그리고 이것은 프라이버시와 기밀을 유지하게하고 스마트컨트랙트를 가능하게합니다.
+
 Let's explore these differentiating features in more detail.
+
+더 디테일하게 차이점을 살펴보자
 
 ## Modularity
 
@@ -152,6 +165,8 @@ architecture. Whether it is pluggable consensus, pluggable identity management
 protocols such as LDAP or OpenID Connect, key management protocols or
 cryptographic libraries, the platform has been designed at its core to be
 configured to meet the diversity of enterprise use case requirements.
+
+Hyperledger Fabric은 
 
 At a high level, Fabric is comprised of the following modular components:
 
