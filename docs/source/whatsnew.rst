@@ -10,6 +10,7 @@ Each v2.x minor release builds on the v2.0 release with minor features,
 improvements, and bug fixes.
 
 Let's take a look at some of the highlights of the Fabric v2.0 release...
+떠나보자 쯔아
 
 Decentralized governance for smart contracts
 --------------------------------------------
