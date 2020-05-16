@@ -18,11 +18,6 @@ Bitcoin and Ethereum fall into a class of blockchain that we would classify as
 _public permissionless_ blockchain technology. Basically, these are public
 networks, open to anyone, where participants interact anonymously.
 
-블록체인 중 가장 첫번째로 알려진건 가상화폐 비트코인입니다. 다른 가상화폐들도 비트코인을 따라갑니다.
-이더리움은 비트코인의 많은 특징을 가져감과 동시에 분산화된 어플리케이션을 만들기 위한 스마트컨트랙트를 추가하였습니다.
-비트코인과 이더리움은 public permissionless 블록체인이라고 분류합니다. public 블록체인은 누구에게나 열려있고
-참여자들은 익명으로 상호작용합니다.
-
 As the popularity of Bitcoin, Ethereum and a few other derivative technologies
 grew, interest in applying the underlying technology of the blockchain,
 distributed ledger and distributed application platform to more innovative
