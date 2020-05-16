@@ -7,7 +7,8 @@ protocol_, grouped into blocks that include a hash that bind each block to the
 preceding block.
 
 일반적으로 블록체인은 peer 노드로 이루어진 분산화된 네트워크안에서 유지되는 불변의 거래장부입니다.
-트랜잭션은 합의 프로토콜(전 블록의 hash를 현 블록에 기록해 블록을 연결)에 따라 검증이 되고 장부에 기록이 됩니다. 각각의 노드들은 장부의 복사본을 유지합니다.
+트랜잭션은 전 블록의 해시값을 현 블록에 기록해 블록을 연결하는 합의 프로토콜에 따라 검증이 되고 장부에 기록이 됩니다.
+각각의 노드들은 장부의 복사본을 유지합니다.
 
 The first and most widely recognized application of blockchain is the
 [Bitcoin](https://en.wikipedia.org/wiki/Bitcoin) cryptocurrency, though others
@@ -61,7 +62,7 @@ differentiates itself from other blockchain platforms and describes some of the
 motivation for its architectural decisions.
 
 많은 블록체인 플랫폼이 현재 기업에서 적용되는 한편 Hyperledger Fabric은 처음부터 기업형으로 디자인 되었습니다.
-앞으로 나올 섹션들은 Hyperledger Fabric (Fabric)이 얼마나 다른 블록체인 플랫폼과 차별화되어있는지 설명하고
+앞으로 나올 섹션들은 Hyperledger Fabric (Fabric) 이 얼마나 다른 블록체인 플랫폼과 차별화되어있는지 설명하고
 구조적 결정(디자인 결정)에 동기를 부여합니다. 
 
 ## Hyperledger Fabric
@@ -115,7 +116,7 @@ off of what trust _does_ exist between participants, such as a legal agreement
 or framework for handling disputes.
 
 Fabric platform은 permissioned입니다. 이것은 익명이고 그러므로 완전히 untrusted한 public permissionless network와 
-다르게 참여자들은 서로를 알고 있습니다. 참여자가 완전히 다른 참여자에 대한 신뢰가 없어도(ex-참여자가 경쟁자일때) 네트워크가 참여자간의 신뢰가 존재하는 것을
+다르게 참여자들은 서로를 알고 있습니다. 참여자가 완전히 다른 참여자에 대한 신뢰가 없어도 네트워크가 참여자간의 신뢰가 존재하는 것을
 기반으로하는governance model아래 운영됩니다.
 
 One of the most important of the platform's differentiators is its support for
