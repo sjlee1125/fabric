@@ -7,7 +7,7 @@ protocol_, grouped into blocks that include a hash that bind each block to the
 preceding block.
 
 일반적으로 블록체인은 peer 노드로 이루어진 분산화된 네트워크안에서 유지되는 불변의 거래장부입니다.
-트랜잭션은 합의 프로토콜 l (한글로 이렇게 해도안되는거여?) and 에 따라 검증이 되고 장부에 기록이 됩니다. 각각의 노드들은 장부의 복사본을 유지합니다.
+트랜잭션은 합의 프로토(해시값) 에
 
 The first and most widely recognized application of blockchain is the
 [Bitcoin](https://en.wikipedia.org/wiki/Bitcoin) cryptocurrency, though others
